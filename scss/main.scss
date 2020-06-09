@@ -10,12 +10,12 @@
 
 @font-face{
     font-family: "colfax";
-    src: url("../../assets/fonts/Colfax-regular.otf");
+    src: url(".././assets/fonts/Colfax-regular.otf");
 }
 
 @font-face{
     font-family: "colfaxM";
-    src: url("../../assets/fonts/Colfax-Medium.otf");
+    src: url(".././assets/fonts/Colfax-Medium.otf");
 }
 
 body{
@@ -89,7 +89,7 @@ header{
 }
 
 .header{
-    background-image: url('../../assets/img/header.jpg');  
+    background-image: url('.././assets/img/header.jpg');  
     background-position-x: center;
     @extend .responsiveBg;
     height: 100vh;
@@ -170,13 +170,13 @@ header{
     }
 
     .image{
-        background: url('../../assets/img/me.png');
+        background: url('.././assets/img/me.png');
         background-size: contain;
         /* @extend .responsiveBg; */
         height: 100%;
         width: 100%;
         @include mediaMd{
-            background: url('../../assets/img/me-sm.jpg');
+            background: url('.././assets/img/me-sm.jpg');
             border-radius: 50%;
             background-size: cover;
             background-repeat: no-repeat;
@@ -408,10 +408,10 @@ header{
             margin-bottom: 60px;
             height: 100%;
 
-            &.pic1{ background: url('../../assets/img/0.jpg'); }
-            &.pic2{ background: url('../../assets/img/1.jpg'); }
+            &.pic1{ background: url('.././assets/img/0.jpg'); }
+            &.pic2{ background: url('.././assets/img/1.jpg'); }
             &.pic3{ 
-                background: url('../../assets/img/2.jpg'); 
+                background: url('.././assets/img/2.jpg'); 
                 @include mediaFromTo(1122px, 1300px){
                     grid-column: 1 / 3;
                     justify-self: center;
