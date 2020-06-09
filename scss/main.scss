@@ -1,0 +1,667 @@
+
+@import "config";
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face{
+    font-family: "colfax";
+    src: url("../../assets/fonts/Colfax-regular.otf");
+}
+
+@font-face{
+    font-family: "colfaxM";
+    src: url("../../assets/fonts/Colfax-Medium.otf");
+}
+
+body{
+    font-family: "colfax";
+
+    & > section{
+        @extend .sectionPadding;
+    }
+
+    section h2 {
+        @extend .sectionName;
+    }
+}
+
+
+
+
+
+
+/* Preloader */
+
+.loaderBg{
+    position: fixed;
+    overflow-y: hidden;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    @extend .center;
+    z-index: 300;
+    opacity: 1;
+    transition: all 0.4s ease;
+    visibility: visible;
+    
+    .preloader{
+        width: 150px;
+        height: 150px;
+        @include mediaMd{
+            width: 100px;
+            height: 100px;
+        }
+        border: 8px solid darken($light-gray, 10);
+        border-top: 8px solid $primary;
+        border-radius: 50%;
+        animation: load 2s linear infinite;
+    }
+}
+
+
+@keyframes load {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.finish-loading{
+    opacity: 0;
+    /* pointer-events: none; */ 
+    visibility: hidden;
+}
+
+
+
+
+
+
+
+/* Header */
+header{
+    overflow-y: hidden;
+}
+
+.header{
+    background-image: url('../../assets/img/header.jpg');  
+    background-position-x: center;
+    @extend .responsiveBg;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    @extend .center;
+    @include mediaFromTo(780px, 1700px){
+        background-attachment: fixed;
+    }
+
+    &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(19, 18, 18, 0.774);
+    }
+
+    .content{
+        color: white;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        h1{
+            font-family: "colfaxM";
+            font-weight: bold;
+            font-size: fontCalc(35, 60);
+            margin-bottom: 10px;
+            
+        }
+
+        h6{
+            font-size: fontCalc(17, 22);
+            
+        }
+    }
+}
+
+
+
+/* About */
+
+.about{
+    @extend .container;
+    
+    .wrapper{ 
+        display: grid;
+        grid-template-columns: 210px 2fr;
+        grid-template-rows: 370px;
+        grid-gap: 50px;
+        @include mediaMd{
+            grid-template-rows: 170px;
+            grid-gap: 30px;
+        }
+        .img-wrapper, aside{
+            @include mediaMd{
+                grid-column: 1 / 3;
+                justify-self: center;
+            }
+        }
+    }
+
+
+    .img-wrapper{
+        padding: 3px;
+        border-radius: 4px;
+        border: 1px solid #cccdce;
+        @include mediaMd{
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+        }
+    }
+
+    .image{
+        background: url('../../assets/img/me.png');
+        background-size: contain;
+        /* @extend .responsiveBg; */
+        height: 100%;
+        width: 100%;
+        @include mediaMd{
+            background: url('../../assets/img/me-sm.jpg');
+            border-radius: 50%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position-y: -10px;
+        }
+    }
+
+
+    aside{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include mediaFromTo(985px, 1700px){
+            padding-left: 10%;
+        }
+
+        p{
+            font-size: fontCalc(15, 22);
+            line-height: 1.6em;
+            color: $dark-gray;
+        }
+
+            .info{
+                display: flex;
+                justify-content: space-between;
+                margin: 20px 0;
+                width: 100%;
+                @include mediaSm{
+                    flex-direction: column;
+                }
+                p{
+                    font-size: fontCalc(14, 18);
+                }
+                p:first-child{
+                    margin-right: 15px;
+                }
+            }
+
+        
+        a{
+            @extend .button;
+            @extend .linkButton;
+            width: 150px;
+            margin: 30px auto 0;
+            
+            @include mediaSm{
+                width: 100px;
+                font-size: 0.8rem;
+            }
+
+            span{
+                position: absolute;
+                background: $light-gray;
+                transform: translate(-50%, -50%);
+                pointer-events: none;
+                border-radius: 50%;
+                animation: wave 0.4s linear;
+            }
+            @keyframes wave {
+                0%{
+                    width: 0;
+                    height: 0;
+                    opacity: 0.5;
+                }
+                100%{
+                    width: 300px;
+                    height: 300px;
+                    opacity: 0;
+                }
+            }
+        }
+        
+        
+    }
+}
+
+
+
+
+/* Up Arrow */
+
+.arrow{
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 10px 10px rgba(0,0,0,.16),  5px 0 10px rgba(0,0,0,.16);
+    display: flex;
+    @extend .center;
+    z-index: 200;
+    cursor: pointer;
+    /* visibility: hidden; */ 
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.5s all ease-in-out;
+
+    i{
+        color: $primary;
+        font-size: 1.5em;
+    }
+}
+
+.arrow.active{
+    /* visibility: visible;  */
+    pointer-events: auto;
+    opacity: 1;
+}
+
+
+
+
+
+/* Services */
+
+.services{
+    
+    background-color: $light-gray;
+
+
+    .wrapper{
+        @include grid(222px);
+        
+
+        & > div{
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 7px;
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &:hover{
+                box-shadow: 0 3px 10px 0 rgba(0,0,0,.16), 0 5px 15px 0 rgba(0,0,0,.12);
+            }
+
+
+            i{
+                margin-bottom: 10px;
+                font-size: fontCalc(24, 30);
+            }
+
+            h4{
+                font-size: fontCalc(16);
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            
+            p{
+                text-align: center;
+                font-size: fontCalc(15);
+                color: $dark-gray;
+            }
+        }
+
+        & > div:last-child{
+            @include mediaFromTo(620px, 958px){
+                grid-column: 1 / 3;
+                justify-self: center;
+                width: 50%;
+            }
+        }
+
+        
+    }
+}
+
+
+
+
+
+/* Skills */
+
+.skills{
+    
+    @extend .container;
+
+    .wrapper{
+        @include grid(200px, 80px, 80px);
+        list-style: none;
+    }
+
+    h4{
+        margin-bottom: 18px;
+        font-size: fontCalc(15);
+    }
+    
+
+    .bar{
+        height: 3px;
+        border-radius: 3px;
+        overflow: hidden;
+        background-color: lighten($dark-gray, 35);
+
+        span{
+            display: block;
+            background-color: $primary;
+            height: 100%;
+            
+        }
+    }
+}
+
+
+
+
+
+/* Portfolio */
+
+.portfolio{
+    background-color: $light-gray;
+    
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        @extend .center;
+        @include grid(400px, 300px, 30px);
+        @include mediaFromTo(1300px, 1700px){
+            @include grid(300px, 300px, 30px);
+        }
+        @include mediaSm{
+            @include grid(250px, 300px, 30px);
+        }
+
+        & > .project{
+            background-color: #fff;
+            margin-bottom: 60px;
+            height: 100%;
+
+            &.pic1{ background: url('../../assets/img/0.jpg'); }
+            &.pic2{ background: url('../../assets/img/1.jpg'); }
+            &.pic3{ 
+                background: url('../../assets/img/2.jpg'); 
+                @include mediaFromTo(1122px, 1300px){
+                    grid-column: 1 / 3;
+                    justify-self: center;
+                    width: 50%;
+                }
+            }
+            
+            &.pic1, &.pic2, &.pic3{
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .overlay{
+                position: absolute;
+                top: 0; left: 0;
+                height: 100%;
+                width: 100%;
+                padding: 0 20%;
+                background: rgba(0,0,0,0);
+                transition: all 0.4s ease;
+                display: flex;
+                flex-direction: column;
+                @extend .center;
+            }
+            &:hover .overlay{
+                background: rgba(27, 27, 27, 0.856);
+            }
+
+            .overlay p, .overlay a{
+                opacity: 0;
+                transition: all 0.4s ease;
+                font-weight: bold;
+            }
+            &:hover .overlay p, &:hover .overlay a{opacity: 1;}
+
+
+            .overlay p{
+                color: white;
+            }
+            .overlay a{
+                @extend .button;
+                @extend .linkButton;
+                margin: 20px auto 0;
+                padding: 15px 20px;
+            }
+        
+        }
+        
+    }
+}
+
+
+
+
+
+/* Contact */
+
+.contact{
+    @extend .container;
+
+    form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+    }
+
+    form .form-wrapper, form .txt-area { position: relative; margin-bottom: 40px;}
+
+    .form-wrapper input, textarea {
+        width: 100%;
+        height: 100%;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        font-size: 1rem;
+        font-family: 'colfax';
+        border: none;
+        outline: none;
+    }
+
+
+    .form-wrapper label, .txt-label{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        border-bottom: 1px solid #000;
+    }
+
+    .form-wrapper label::after, .txt-label::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        height: 100%;
+        width: 0;
+        border-bottom: 3px solid $primary;
+        transition: width 0.3s ease;
+    }
+
+    .content{
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        transition: all 0.3s ease;
+        color: $dark-gray;
+    }
+
+    @mixin inputContent($x, $y) {
+        transform: translate($x, $y) scale(0.8);
+        color: $primary;
+    }
+
+    .form-wrapper input:focus + .label .content, 
+    .form-wrapper input:not(:placeholder-shown) + .label .content
+    {
+        @include inputContent(-10%, -130%);
+    }
+
+
+    .txt-area textarea:focus + .txt-label .content,
+    .txt-area textarea:not(:placeholder-shown) + .txt-label .content
+    {
+        @include inputContent(-10%, -25%);
+    }
+
+
+    .form-wrapper input:focus + .label::after, 
+    .form-wrapper input:not(:placeholder-shown) + .label::after,
+    .txt-area textarea:focus + .txt-label::after
+    {
+        width: 100%;
+    }
+
+
+
+
+
+    .txt-area{
+        position: relative;
+
+        textarea{
+            resize: none;
+        }
+
+        .txt-label{
+            position: absolute;
+
+            .content{
+                @extend .content;
+                top: 12px;
+
+            }
+        }
+
+    }
+
+
+
+
+
+    .button{
+        
+        @extend .button;
+        justify-self: center;
+        width: 150px;
+        @include mediaSm{
+            width: initial;
+        }
+
+        span{
+            position: absolute;
+            background: $light-gray;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            border-radius: 50%;
+            animation: wave 0.4s linear;
+        }
+        @keyframes wave {
+            0%{
+                width: 0;
+                height: 0;
+                opacity: 0.5;
+            }
+            100%{
+                width: 300px;
+                height: 300px;
+                opacity: 0;
+            }
+        }
+    }
+
+
+
+    
+
+    .subject, .txt-area, .button{
+        grid-column: 1/3;
+    }
+
+    .name, .email{
+        @include mediaMd{
+            grid-column: 1/3;
+        }
+    }
+
+
+
+}
+
+
+
+
+
+/* footer */
+
+footer{
+    background-color: $primary;
+    
+    .wrapper{
+        @extend .container;
+        padding-bottom: 20px;
+        height: 170px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+
+        p{
+            text-align: center;
+            font-weight: bold;
+            font-size: fontCalc(14, 18);
+        }
+
+        .icons a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.2s ease;
+            i{
+                margin: 10px 3px;
+                font-size: fontCalc(16);
+            }
+
+            &:hover{
+                color: lighten($dark-gray, 20%);
+            }
+        }
+
+    }
+}
