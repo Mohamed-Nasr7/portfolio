@@ -16,6 +16,16 @@ window.addEventListener('load', function(){
 
 
 
+//scroll down arrow
+
+var arrow = document.querySelector(".arrows");
+var about = document.querySelector("#about");
+var aboutOffset = about.offsetTop;
+
+arrow.addEventListener("click", function(){
+    window.scrollTo({top: aboutOffset, behavior: 'smooth'});
+});
+
 
 
 //Buttons wave effect
