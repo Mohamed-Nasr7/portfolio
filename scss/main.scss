@@ -39,6 +39,7 @@ body{
 
 
 
+
 /* Preloader */
 
 .loaderBg{
@@ -157,6 +158,10 @@ header{
             }
             &:nth-child(3){
                 animation-delay: -0.4s;
+            }
+            @include mediaSm{
+                width: 30px;
+                height: 30px;
             }
         }
 
