@@ -19,11 +19,11 @@ window.addEventListener('load', function(){
 //scroll down arrow
 
 var arrow = document.querySelector(".arrows");
-var about = document.querySelector("#about");
-var aboutOffset = about.offsetTop;
+var portfolio = document.querySelector("#portfolio");
+var portfolioOffset = portfolio.offsetTop;
 
 arrow.addEventListener("click", function(){
-    window.scrollTo({top: aboutOffset, behavior: 'smooth'});
+    window.scrollTo({top: portfolioOffset, behavior: 'smooth'});
 });
 
 
@@ -45,7 +45,6 @@ function generateRipples(e, element){
 
 buttons.forEach(function(button){
     button.addEventListener('click', function(e){
-        e.preventDefault();
         generateRipples(e, this);
         
     });

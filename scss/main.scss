@@ -183,6 +183,172 @@ header{
 
 
 
+
+/* Portfolio */
+
+.portfolio{
+    
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        @extend .center;
+        @include grid(400px, 300px, 30px);
+        @include mediaFromTo(1300px, 1700px){
+            @include grid(500px, 300px, 30px);
+        }
+        @include mediaSm{
+            @include grid(250px, 300px, 30px);
+        }
+
+        & > .project{
+            background-color: #fff;
+            margin-bottom: 60px;
+            height: 100%;
+
+            p{
+                font-size: 18px;
+            }
+
+            &.pic1{ background: url('.././assets/img/0.jpg'); }
+            &.pic2{ background: url('.././assets/img/1.jpg'); }
+            &.pic3{ background: url('.././assets/img/2.jpg'); }
+            &.pic4{ background: url('.././assets/img/exam.png'); }
+            
+            &.pic1, &.pic2, &.pic3, &.pic4{
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .overlay{
+                position: absolute;
+                top: 0; left: 0;
+                height: 100%;
+                width: 100%;
+                padding: 0 15%;
+                background: rgba(0,0,0,0);
+                transition: all 0.4s ease;
+                display: flex;
+                flex-direction: column;
+                @extend .center;
+            }
+            &:hover .overlay{
+                background: rgba(27, 27, 27, 0.856);
+            }
+
+            .overlay p, .overlay a{
+                opacity: 0;
+                transition: all 0.4s ease;
+                font-weight: bold;
+            }
+            &:hover .overlay p, &:hover .overlay a{opacity: 1;}
+
+
+            .overlay p{
+                color: white;
+                line-height: 1.4em;
+            }
+            .overlay a{
+                @extend .button;
+                @extend .linkButton;
+                margin: 20px auto 0;
+                padding: 15px 20px;
+                display: inline-block;
+            }
+        
+        }
+        
+    }
+}
+
+
+
+
+
+
+
+
+/* Up Arrow */
+
+.arrow{
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 10px 10px rgba(0,0,0,.16),  5px 0 10px rgba(0,0,0,.16);
+    display: flex;
+    @extend .center;
+    z-index: 200;
+    cursor: pointer;
+    /* visibility: hidden; */ 
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.5s all ease-in-out;
+
+    i{
+        color: $primary;
+        font-size: 1.5em;
+    }
+}
+
+.arrow.active{
+    /* visibility: visible;  */
+    pointer-events: auto;
+    opacity: 1;
+}
+
+
+
+
+
+
+/* Skills */
+
+.skills{
+    
+    background-color: $light-gray;
+
+    .header-container{
+        @extend .container;
+    }
+
+    .wrapper{
+        @include grid(200px, 80px, 80px);
+        @extend .container;
+        list-style: none;
+    }
+
+    h4{
+        margin-bottom: 18px;
+        font-size: fontCalc(15);
+    }
+    
+
+    .bar{
+        height: 3px;
+        border-radius: 3px;
+        overflow: hidden;
+        background-color: lighten($dark-gray, 35);
+
+        span{
+            display: block;
+            background-color: $primary;
+            height: 100%;
+            
+        }
+    }
+}
+
+
+
+
+
+
+
+
 /* About */
 
 .about{
@@ -304,214 +470,7 @@ header{
 
 
 
-/* Up Arrow */
 
-.arrow{
-    height: 50px;
-    width: 50px;
-    position: fixed;
-    bottom: 40px;
-    right: 30px;
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: 0 10px 10px rgba(0,0,0,.16),  5px 0 10px rgba(0,0,0,.16);
-    display: flex;
-    @extend .center;
-    z-index: 200;
-    cursor: pointer;
-    /* visibility: hidden; */ 
-    pointer-events: none;
-    opacity: 0;
-    transition: 0.5s all ease-in-out;
-
-    i{
-        color: $primary;
-        font-size: 1.5em;
-    }
-}
-
-.arrow.active{
-    /* visibility: visible;  */
-    pointer-events: auto;
-    opacity: 1;
-}
-
-
-
-
-
-/* Services */
-
-.services{
-    
-    background-color: $light-gray;
-
-
-    .wrapper{
-        @include grid(222px);
-        
-
-        & > div{
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 7px;
-            box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            &:hover{
-                box-shadow: 0 3px 10px 0 rgba(0,0,0,.16), 0 5px 15px 0 rgba(0,0,0,.12);
-            }
-
-
-            i{
-                margin-bottom: 10px;
-                font-size: fontCalc(24, 30);
-            }
-
-            h4{
-                font-size: fontCalc(16);
-                text-align: center;
-                margin-bottom: 20px;
-            }
-            
-            p{
-                text-align: center;
-                font-size: fontCalc(15);
-                color: $dark-gray;
-            }
-        }
-
-        & > div:last-child{
-            @include mediaFromTo(620px, 958px){
-                grid-column: 1 / 3;
-                justify-self: center;
-                width: 50%;
-            }
-        }
-
-        
-    }
-}
-
-
-
-
-
-/* Skills */
-
-.skills{
-    
-    @extend .container;
-
-    .wrapper{
-        @include grid(200px, 80px, 80px);
-        list-style: none;
-    }
-
-    h4{
-        margin-bottom: 18px;
-        font-size: fontCalc(15);
-    }
-    
-
-    .bar{
-        height: 3px;
-        border-radius: 3px;
-        overflow: hidden;
-        background-color: lighten($dark-gray, 35);
-
-        span{
-            display: block;
-            background-color: $primary;
-            height: 100%;
-            
-        }
-    }
-}
-
-
-
-
-
-/* Portfolio */
-
-.portfolio{
-    background-color: $light-gray;
-    
-    .wrapper{
-        display: flex;
-        flex-direction: column;
-        @extend .center;
-        @include grid(400px, 300px, 30px);
-        @include mediaFromTo(1300px, 1700px){
-            @include grid(300px, 300px, 30px);
-        }
-        @include mediaSm{
-            @include grid(250px, 300px, 30px);
-        }
-
-        & > .project{
-            background-color: #fff;
-            margin-bottom: 60px;
-            height: 100%;
-
-            &.pic1{ background: url('.././assets/img/0.jpg'); }
-            &.pic2{ background: url('.././assets/img/1.jpg'); }
-            &.pic3{ 
-                background: url('.././assets/img/2.jpg'); 
-                @include mediaFromTo(1122px, 1300px){
-                    grid-column: 1 / 3;
-                    justify-self: center;
-                    width: 50%;
-                }
-            }
-            
-            &.pic1, &.pic2, &.pic3{
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center;
-            }
-
-            .overlay{
-                position: absolute;
-                top: 0; left: 0;
-                height: 100%;
-                width: 100%;
-                padding: 0 15%;
-                background: rgba(0,0,0,0);
-                transition: all 0.4s ease;
-                display: flex;
-                flex-direction: column;
-                @extend .center;
-            }
-            &:hover .overlay{
-                background: rgba(27, 27, 27, 0.856);
-            }
-
-            .overlay p, .overlay a{
-                opacity: 0;
-                transition: all 0.4s ease;
-                font-weight: bold;
-            }
-            &:hover .overlay p, &:hover .overlay a{opacity: 1;}
-
-
-            .overlay p{
-                color: white;
-                line-height: 1.4em;
-            }
-            .overlay a{
-                @extend .button;
-                @extend .linkButton;
-                margin: 20px auto 0;
-                padding: 15px 20px;
-            }
-        
-        }
-        
-    }
-}
 
 
 
@@ -520,7 +479,16 @@ header{
 /* Contact */
 
 .contact{
-    @extend .container;
+
+    background-color: $light-gray;
+
+    .header-container{
+        @extend .container;
+    }
+
+    .wrapper{
+        @extend .container;
+    }
 
     form{
         display: grid;
@@ -539,6 +507,7 @@ header{
         font-family: 'colfax';
         border: none;
         outline: none;
+        background: transparent;
     }
 
 

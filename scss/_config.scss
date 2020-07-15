@@ -137,7 +137,7 @@ $dark-gray: #7a7a7a;
 
 
 
-$time : 25 35 45 55 ;
+$time : 25 35 45 55 65 75 85;
 
 @each $i in $time{
     .delay-#{$i}{
