@@ -295,7 +295,7 @@ body {
 
 /* Header */
 header {
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .header {
@@ -304,12 +304,6 @@ header {
   height: 100vh;
   position: relative;
   display: flex;
-}
-
-@media screen and (min-width: 780px) and (max-width: 1700px) {
-  .header {
-    background-attachment: fixed;
-  }
 }
 
 .header:after {
@@ -331,15 +325,32 @@ header {
   text-align: center;
 }
 
+.header .content h1, .header .contact .txt-area .txt-label .content h1, .contact .txt-area .txt-label .header .content h1, .header .content h6, .header .contact .txt-area .txt-label .content h6, .contact .txt-area .txt-label .header .content h6 {
+  position: absolute;
+  left: 50%;
+  width: 150px;
+}
+
+@supports (width: max-content) {
+  .header .content h1, .header .contact .txt-area .txt-label .content h1, .contact .txt-area .txt-label .header .content h1, .header .content h6, .header .contact .txt-area .txt-label .content h6, .contact .txt-area .txt-label .header .content h6 {
+    width: max-content;
+  }
+}
+
 .header .content h1, .header .contact .txt-area .txt-label .content h1, .contact .txt-area .txt-label .header .content h1 {
   font-family: "colfaxM";
   font-weight: bold;
   font-size: calc(35px + (60 - 35) * ((100vw - 320px) / (1700 - 320)));
+  top: 50%;
   margin-bottom: 10px;
+  transform: translate(-50%, -50%);
+  /* text-shadow: 0 0 10px #fff, 0 0 20px #fff; */
 }
 
 .header .content h6, .header .contact .txt-area .txt-label .content h6, .contact .txt-area .txt-label .header .content h6 {
   font-size: calc(17px + (22 - 17) * ((100vw - 320px) / (1700 - 320)));
+  top: 57%;
+  transform: translate(-50%, -50%);
 }
 
 .header .arrows {
@@ -352,8 +363,8 @@ header {
 
 .header .arrows span {
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-bottom: 1.5px solid #fff;
   border-right: 1.5px solid #fff;
   transform: rotate(45deg);
