@@ -353,7 +353,7 @@ header {
 .header .content h1, .header .contact .txt-area .txt-label .content h1, .contact .txt-area .txt-label .header .content h1 {
   font-family: "colfaxM";
   font-weight: bold;
-  font-size: calc(37px + (45 - 37) * ((100vw - 320px) / (1700 - 320)));
+  font-size: calc(37px + (50 - 37) * ((100vw - 320px) / (1700 - 320)));
   top: 50%;
   margin-bottom: 10px;
   transform: translate(-50%, -50%);
@@ -364,6 +364,7 @@ header {
   font-size: calc(15px + (19 - 15) * ((100vw - 320px) / (1700 - 320)));
   top: 57%;
   transform: translate(-50%, -50%);
+  margin-top: 7px;
 }
 
 .header .arrows {
