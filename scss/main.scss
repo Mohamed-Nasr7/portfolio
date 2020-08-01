@@ -20,6 +20,7 @@
 
 body{
     font-family: "colfax";
+    color: $primary;
 
     & > section{
         @extend .sectionPadding;
@@ -32,7 +33,7 @@ body{
 
 
 ::selection{
-    background-color: rgb(48, 48, 48);
+    background-color: $primary;
     color: #fff;
 }
 
@@ -62,8 +63,8 @@ body{
             width: 100px;
             height: 100px;
         }
-        border: 8px solid darken($light-gray, 10);
-        border-top: 8px solid $primary;
+        border: 9px solid darken($light-gray, 10);
+        border-top: 9px solid $primary;
         border-radius: 50%;
         animation: load 2s linear infinite;
     }
@@ -101,6 +102,7 @@ header{
     position: relative;
     display: flex;
     @extend .center;
+    background-color: #000;
 
 
     &:after{
@@ -111,6 +113,16 @@ header{
         height: 100%;
         width: 100%;
         background-color: rgba(19, 18, 18, 0.774);
+        
+    }
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        filter: blur(4px);
     }
 
     .content{
@@ -133,7 +145,7 @@ header{
         h1{
             font-family: "colfaxM";
             font-weight: bold;
-            font-size: fontCalc(35, 60);
+            font-size: fontCalc(37, 45);
             top: 50%;
             margin-bottom: 10px;
             transform: translate(-50%, -50%);
@@ -142,7 +154,7 @@ header{
         }
 
         h6{
-            font-size: fontCalc(17, 22);
+            font-size: fontCalc(15, 19);
             top: 57%;
             transform: translate(-50%, -50%);
             
@@ -158,8 +170,8 @@ header{
 
         span{
             display: block;
-            width: 35px;
-            height: 35px;
+            width: 25px;
+            height: 25px;
             border-bottom: 1.5px solid #fff;
             border-right: 1.5px solid #fff;
             transform: rotate(45deg);
@@ -172,8 +184,8 @@ header{
                 animation-delay: -0.4s;
             }
             @include mediaSm{
-                width: 30px;
-                height: 30px;
+                width: 20px;
+                height: 20px;
             }
         }
 
@@ -201,35 +213,80 @@ header{
 .portfolio{
     
     .wrapper{
-        display: flex;
-        flex-direction: column;
-        @extend .center;
-        @include grid(400px, 300px, 30px);
+        /* display: flex;
+        flex-direction: column; */
+        
+        /* @extend .center;
+        @include grid(300px, 300px, 80px);
         @include mediaFromTo(1300px, 1700px){
-            @include grid(500px, 300px, 30px);
+            @include grid(300px, 300px, 80px);
         }
         @include mediaSm{
-            @include grid(250px, 300px, 30px);
+            @include grid(250px, 300px, 80px);
+        } */
+
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: minmax(250px, 1fr);
+        grid-gap: 70px;
+        justify-content: center;
+
+        @include mediaMd{
+            grid-template-columns: minmax(250px, 400px);
         }
 
-        & > .project{
-            background-color: #fff;
-            margin-bottom: 60px;
-            height: 100%;
+        @include mediaSm{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+        }
 
+        
+
+
+        & > .project{
+            background-color: rgb(0, 0, 0);
+            height: 300px;
+            box-shadow:
+                0 -6px 12px rgba(0, 5, 71, 0.028),
+                0 -7.9px 17.5px rgba(1, 0, 48, 0.049),
+                0 -3.2px 24px rgba(0, 0, 0, 0.066),
+                0 14.9px 35.4px rgba(8, 7, 56, 0.082),
+                0 45px 80px rgba(40, 18, 168, 0.09)
+                ;
+
+            @include mediaSm{
+                height: 250px;
+                width: 250px;
+            }    
+
+            &:after{
+                content: '';
+                background-color: #595c611e;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                border-radius: 5px;
+            }
+            
             p{
                 font-size: 18px;
+                text-align: center;
             }
 
             &.pic1{ background: url('.././assets/img/0.jpg'); }
             &.pic2{ background: url('.././assets/img/1.jpg'); }
-            &.pic3{ background: url('.././assets/img/2.jpg'); }
-            &.pic4{ background: url('.././assets/img/exam.png'); }
+            &.pic3{ background: url('.././assets/img/the-conv.jpg'); }
+            &.pic4{ background: url('.././assets/img/2.jpg'); }
+            &.pic5{ background: url('.././assets/img/exam.png'); }
             
-            &.pic1, &.pic2, &.pic3, &.pic4{
+            &.pic1, &.pic2, &.pic3, &.pic4, &.pic5{
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center;
+                border-radius: 5px;
             }
 
             .overlay{
@@ -237,12 +294,14 @@ header{
                 top: 0; left: 0;
                 height: 100%;
                 width: 100%;
-                padding: 0 15%;
+                padding: 0 10%;
                 background: rgba(0,0,0,0);
                 transition: all 0.4s ease;
                 display: flex;
                 flex-direction: column;
                 @extend .center;
+                border-radius: 5px;
+                z-index: 20;
             }
             &:hover .overlay{
                 background: rgba(27, 27, 27, 0.856);
@@ -251,21 +310,41 @@ header{
             .overlay p, .overlay a{
                 opacity: 0;
                 transition: all 0.4s ease;
+                transform: translateY(40px);
+                font-size: fontCalc(14, 18);
                 font-weight: bold;
             }
-            &:hover .overlay p, &:hover .overlay a{opacity: 1;}
+            &:hover .overlay p, &:hover .overlay a{
+                opacity: 1;
+                transform: translateY(0);
+            }
 
+
+            .links{
+                text-align: center;
+            }
 
             .overlay p{
                 color: white;
                 line-height: 1.4em;
             }
             .overlay a{
-                @extend .button;
-                @extend .linkButton;
-                margin: 20px auto 0;
-                padding: 15px 20px;
+                color: darken($light-gray, 7);
+                border: 0;
+                outline: 0;
+                text-decoration: none;
+                text-align: center;
                 display: inline-block;
+                border-bottom: solid 1.5px transparent;
+                margin-top: 7px;
+                &:first-of-type{
+                    margin: 30px 12px 0 0;
+                }
+
+                &:hover{
+                    color: darken($light-gray, 15);
+                    border-bottom: 1.5px solid darken($light-gray, 15);
+                }
             }
         
         }
@@ -290,7 +369,7 @@ header{
     right: 30px;
     background: #fff;
     border-radius: 50%;
-    box-shadow: 0 10px 10px rgba(0,0,0,.16),  5px 0 10px rgba(0,0,0,.16);
+    box-shadow: 0 10px 10px rgba(10, 0, 66, 0.16),  5px 0 10px rgba(0,0,0,.16);
     display: flex;
     @extend .center;
     z-index: 200;
@@ -300,9 +379,17 @@ header{
     opacity: 0;
     transition: 0.5s all ease-in-out;
 
+    @include mediaSm{
+        height: 40px;
+        width: 40px;
+    }
+
     i{
         color: $primary;
         font-size: 1.5em;
+        @include mediaSm{
+            font-size: 1.2em;
+        }
     }
 }
 
@@ -328,14 +415,18 @@ header{
     }
 
     .wrapper{
-        @include grid(200px, 80px, 80px);
+        @include grid(150px, 60px, 50px);
         @extend .container;
         list-style: none;
+        padding: 0 7px;
+        @include mediaSm{
+            padding: 0 20px;
+        }
     }
 
     h4{
         margin-bottom: 18px;
-        font-size: fontCalc(15);
+        font-size: fontCalc(14, 18);
     }
     
 
@@ -344,11 +435,15 @@ header{
         border-radius: 3px;
         overflow: hidden;
         background-color: lighten($dark-gray, 35);
+        @include mediaSm{
+            height: 2.5px;
+        }
 
         span{
             display: block;
             background-color: $primary;
             height: 100%;
+            width: 0;
             
         }
     }
@@ -364,9 +459,9 @@ header{
 /* About */
 
 .about{
-    @extend .container;
     
-    .wrapper{ 
+    
+    /* .wrapper{ 
         display: grid;
         grid-template-columns: 210px 2fr;
         grid-template-rows: 370px;
@@ -382,69 +477,86 @@ header{
             }
         }
     }
-
+ */
 
     .img-wrapper{
         padding: 3px;
+        margin: 0 auto 10px;
         border-radius: 4px;
         border: 1px solid #cccdce;
-        @include mediaMd{
-            height: 150px;
-            width: 150px;
-            border-radius: 50%;
+        height: 156px;
+        width: 156px;
+        border-radius: 50%;
+        float: left;    
+        -webkit-shape-outside: circle(50% at 50% 50%);;    
+        shape-outside: circle(50% at 50% 50%);
+        margin-right: 40px;
+        @include mediaSm{
+            height: 140px;
+            width: 140px;
+        }
+        @include mediaFromTo(250px, 450px){
+            margin: 0 auto;
+            float: none;
+            height: 130px;
+            width: 130px;
+        }
+        &:after{
+            float: none;
         }
     }
 
     .image{
-        background: url('.././assets/img/me.png');
         background-size: contain;
-        /* @extend .responsiveBg; */
         height: 100%;
         width: 100%;
-        @include mediaMd{
-            background: url('.././assets/img/me-sm.jpg');
-            border-radius: 50%;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position-y: -10px;
-        }
+        background: url('.././assets/img/me-sm.jpg');
+        border-radius: 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-y: -10px;
     }
 
 
     aside{
-        display: flex;
+        /* display: flex;
         flex-direction: column;
-        justify-content: center;
-        @include mediaFromTo(985px, 1700px){
+        justify-content: center; */
+        /* padding: 0 50px; */
+        /* @include mediaFromTo(985px, 1700px){
             padding-left: 10%;
+        } */
+
+        @include mediaFromTo(250px, 450px){
+            text-align: center;
+            margin-top: 17px;
         }
 
         p{
-            font-size: fontCalc(15, 22);
-            line-height: 1.6em;
-            color: $dark-gray;
+            font-size: fontCalc(14, 21);
+            line-height: 1.8em;
+            color: $primary;
         }
 
-            .info{
-                display: flex;
-                justify-content: space-between;
-                margin: 20px 0;
-                width: 100%;
-                @include mediaSm{
-                    flex-direction: column;
-                }
-                p{
-                    font-size: fontCalc(14, 18);
-                }
-                p:first-child{
-                    margin-right: 15px;
-                }
+        .wrap-info {
+            text-align: center;
+        }
+
+        p.info{
+            margin-right: 20px;
+            font-size: fontCalc(14, 18);
+            display: inline-block;
+            &:first-of-type{
+                margin-top: 15px;
             }
+        }
 
         
         a{
-            @extend .button;
-            @extend .linkButton;
+            border: 0;
+            outline: 0;
+            text-decoration: underline;
+            color: $primary;
             width: 150px;
             margin: 30px auto 0;
             
@@ -500,6 +612,7 @@ header{
 
     .wrapper{
         @extend .container;
+        padding: 0 10px;
     }
 
     form{
@@ -531,6 +644,7 @@ header{
         height: 100%;
         pointer-events: none;
         border-bottom: 1px solid #000;
+        font-size: fontCalc(14, 18)
     }
 
     .form-wrapper label::after, .txt-label::after{
@@ -609,9 +723,10 @@ header{
         
         @extend .button;
         justify-self: center;
-        width: 150px;
+        width: 130px;
         @include mediaSm{
             width: initial;
+            font-size: 15px;
         }
 
         span{
@@ -661,12 +776,12 @@ header{
 /* footer */
 
 footer{
-    background-color: $primary;
+    background-color: $dark;
     
     .wrapper{
         @extend .container;
         padding-bottom: 20px;
-        height: 170px;
+        height: 120px;
         color: #fff;
         display: flex;
         flex-direction: column;
@@ -689,7 +804,7 @@ footer{
             }
 
             &:hover{
-                color: lighten($dark-gray, 20%);
+                color: darken($light-gray, 10%);
             }
         }
 

@@ -56,7 +56,7 @@ buttons.forEach(function(button){
 // Fading Page Elements
 
 var disappeared = document.querySelectorAll('.disappeared');
-fadeinPos = window.innerHeight / 1.3;
+fadeinPos = window.innerHeight / 1.2;
 
 disappeared.forEach(function(element){
 
@@ -65,6 +65,25 @@ disappeared.forEach(function(element){
         var elementPos = element.getBoundingClientRect().top;        
         if(elementPos < fadeinPos){
             element.classList.add('fadein');
+        }
+    });
+    
+});
+
+
+
+
+
+var bars = document.querySelectorAll('.progress-bar');
+
+bars.forEach(function(element){
+    var barClass = element.dataset.progress;
+
+    window.addEventListener('scroll', function(){
+
+        var elementPos = element.getBoundingClientRect().top;        
+        if(elementPos < fadeinPos){
+            element.classList.add(barClass);
         }
     });
     
@@ -89,10 +108,7 @@ arrow.addEventListener('click', function(){
 
 
 
-/* function parallax(element, distance, speed){
-    var item = document.querySelector(element);
-    item.style.transform = "translateY("+ distance * speed +"px)";
-} */
+
 
 var header = document.querySelector('.header');
 
@@ -102,6 +118,7 @@ window.addEventListener('scroll', function(){
     var name = document.querySelector('header h1');
     var job = document.querySelector('header h6');
     var pos = (window.pageYOffset / 3) + "px";
+    
 
     header.style.backgroundPosition = "center " + pos;
     name.style.transform = "translate(-50%, "+ ((window.scrollY * -0.2) - 50) +"%)";
