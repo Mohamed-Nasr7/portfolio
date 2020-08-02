@@ -70,6 +70,12 @@
   background-color: #155ea0;
 }
 
+@media screen and (max-width: 568px) {
+  .button, .contact .button {
+    padding: 14px 31px;
+  }
+}
+
 .linkButton {
   display: block;
   text-decoration: none;
@@ -818,7 +824,7 @@ header {
 
 .contact form .form-wrapper, .contact form .txt-area {
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 15px;
 }
 
 .contact .form-wrapper input, .contact textarea {
@@ -905,7 +911,7 @@ header {
 @media screen and (max-width: 568px) {
   .contact .button {
     width: initial;
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 

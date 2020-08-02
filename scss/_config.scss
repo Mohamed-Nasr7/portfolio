@@ -120,6 +120,10 @@ $dark: #1b1c25;
     &:active{
         background-color: lighten($primary, 20);
     }
+
+    @include mediaSm{
+        padding: 14px 31px;
+    }
 }
 
 .linkButton{

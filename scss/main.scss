@@ -626,7 +626,7 @@ header{
         grid-gap: 30px;
     }
 
-    form .form-wrapper, form .txt-area { position: relative; margin-bottom: 40px;}
+    form .form-wrapper, form .txt-area { position: relative; margin-bottom: 15px;}
 
     .form-wrapper input, textarea {
         width: 100%;
@@ -731,7 +731,7 @@ header{
         width: 130px;
         @include mediaSm{
             width: initial;
-            font-size: 15px;
+            font-size: 14px;
         }
 
         span{
