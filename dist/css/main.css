@@ -445,6 +445,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    grid-gap: 0;
   }
 }
 
@@ -458,6 +459,9 @@ header {
   .portfolio .wrapper > .project {
     height: 250px;
     width: 250px;
+  }
+  .portfolio .wrapper > .project:not(:last-of-type) {
+    margin-bottom: 45px;
   }
 }
 
@@ -584,6 +588,12 @@ header {
 
 @media screen and (max-width: 568px) {
   .arrow {
+    right: 17px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .arrow {
     height: 40px;
     width: 40px;
   }
@@ -615,7 +625,7 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-auto-rows: minmax(60px, auto);
-  grid-gap: 50px;
+  grid-gap: 36px;
   list-style: none;
   padding: 0 7px;
 }
@@ -744,9 +754,12 @@ header {
 }
 
 .about aside p.info {
-  margin-right: 20px;
   font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1700 - 320)));
   display: inline-block;
+}
+
+.about aside p.info:first-of-type {
+  margin-right: 30px;
 }
 
 .about aside p.info:first-of-type {

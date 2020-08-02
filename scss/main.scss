@@ -240,6 +240,7 @@ header{
             display: flex;
             flex-direction: column;
             align-items: center;
+            grid-gap: 0;
         }
 
         
@@ -259,6 +260,9 @@ header{
             @include mediaSm{
                 height: 250px;
                 width: 250px;
+                &:not(:last-of-type){
+                    margin-bottom: 45px;
+                }
             }    
 
             &:after{
@@ -366,6 +370,9 @@ header{
     position: fixed;
     bottom: 40px;
     right: 30px;
+    @include mediaSm{
+        right: 17px;
+    }
     background: #fff;
     border-radius: 50%;
     box-shadow: 0 10px 10px rgba(10, 0, 66, 0.16),  5px 0 10px rgba(0,0,0,.16);
@@ -414,7 +421,7 @@ header{
     }
 
     .wrapper{
-        @include grid(150px, 60px, 50px);
+        @include grid(150px, 60px, 36px);
         @extend .container;
         list-style: none;
         padding: 0 7px;
@@ -542,7 +549,9 @@ header{
         }
 
         p.info{
-            margin-right: 20px;
+            &:first-of-type{
+                margin-right: 30px;
+            }
             font-size: fontCalc(14, 18);
             display: inline-block;
             &:first-of-type{
