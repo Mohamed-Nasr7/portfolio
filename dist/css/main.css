@@ -548,7 +548,6 @@ header {
 }
 
 .portfolio .wrapper > .project .overlay a {
-  color: #d6ddf5;
   border: 0;
   outline: 0;
   text-decoration: none;
@@ -556,15 +555,13 @@ header {
   display: inline-block;
   border-bottom: solid 1.5px transparent;
   margin-top: 7px;
+  font-size: calc(12.5px + (17 - 12.5) * ((100vw - 320px) / (1700 - 320)));
+  color: #cad3f2;
+  border-bottom: 1px solid #cad3f2;
 }
 
 .portfolio .wrapper > .project .overlay a:first-of-type {
   margin: 30px 12px 0 0;
-}
-
-.portfolio .wrapper > .project .overlay a:hover {
-  color: #b6c2ed;
-  border-bottom: 1.5px solid #b6c2ed;
 }
 
 /* Up Arrow */

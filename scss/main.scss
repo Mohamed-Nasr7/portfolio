@@ -332,7 +332,6 @@ header{
                 line-height: 1.4em;
             }
             .overlay a{
-                color: darken($light-gray, 7);
                 border: 0;
                 outline: 0;
                 text-decoration: none;
@@ -340,13 +339,11 @@ header{
                 display: inline-block;
                 border-bottom: solid 1.5px transparent;
                 margin-top: 7px;
+                font-size: fontCalc(12.5, 17);
+                color: darken($light-gray, 10);
+                    border-bottom: 1px solid darken($light-gray, 10);
                 &:first-of-type{
                     margin: 30px 12px 0 0;
-                }
-
-                &:hover{
-                    color: darken($light-gray, 15);
-                    border-bottom: 1.5px solid darken($light-gray, 15);
                 }
             }
         
