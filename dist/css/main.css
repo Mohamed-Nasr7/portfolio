@@ -498,14 +498,18 @@ header {
 }
 
 .portfolio .wrapper > .project.pic4 {
-  background: url(".././assets/img/2.jpg");
+  background: url(".././assets/img/recipes.jpg");
 }
 
 .portfolio .wrapper > .project.pic5 {
+  background: url(".././assets/img/weather.jpg");
+}
+
+.portfolio .wrapper > .project.pic6 {
   background: url(".././assets/img/exam.png");
 }
 
-.portfolio .wrapper > .project.pic1, .portfolio .wrapper > .project.pic2, .portfolio .wrapper > .project.pic3, .portfolio .wrapper > .project.pic4, .portfolio .wrapper > .project.pic5 {
+.portfolio .wrapper > .project.pic1, .portfolio .wrapper > .project.pic2, .portfolio .wrapper > .project.pic3, .portfolio .wrapper > .project.pic4, .portfolio .wrapper > .project.pic5, .portfolio .wrapper > .project.pic6 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -737,6 +741,9 @@ header {
   /* @include mediaFromTo(985px, 1700px){
             padding-left: 10%;
         } */
+  /* .wrap-info {
+            text-align: center;
+        } */
 }
 
 @media screen and (min-width: 250px) and (max-width: 450px) {
@@ -747,17 +754,13 @@ header {
 }
 
 .about aside p {
-  font-size: calc(14px + (21 - 14) * ((100vw - 320px) / (1700 - 320)));
-  line-height: 1.8em;
+  font-size: calc(14px + (19 - 14) * ((100vw - 320px) / (1700 - 320)));
+  line-height: 2em;
   color: #092946;
 }
 
-.about aside .wrap-info {
-  text-align: center;
-}
-
 .about aside p.info {
-  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1700 - 320)));
+  font-size: calc(13px + (17 - 13) * ((100vw - 320px) / (1700 - 320)));
   display: inline-block;
 }
 
@@ -819,7 +822,7 @@ header {
 .contact form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 30px;
+  grid-gap: 40px;
 }
 
 .contact form .form-wrapper, .contact form .txt-area {
@@ -847,7 +850,7 @@ header {
   height: 100%;
   pointer-events: none;
   border-bottom: 1px solid #000;
-  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1700 - 320)));
+  font-size: calc(13px + (16 - 13) * ((100vw - 320px) / (1700 - 320)));
 }
 
 .contact .form-wrapper label::after, .contact .txt-label::after {

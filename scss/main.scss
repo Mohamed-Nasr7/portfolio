@@ -282,10 +282,12 @@ header{
             &.pic1{ background: url('.././assets/img/0.jpg'); }
             &.pic2{ background: url('.././assets/img/1.jpg'); }
             &.pic3{ background: url('.././assets/img/the-conv.jpg'); }
-            &.pic4{ background: url('.././assets/img/2.jpg'); }
-            &.pic5{ background: url('.././assets/img/exam.png'); }
+            &.pic4{ background: url('.././assets/img/recipes.jpg'); }
+            &.pic5{ background: url('.././assets/img/weather.jpg'); }
+            &.pic6{ background: url('.././assets/img/exam.png'); }
             
-            &.pic1, &.pic2, &.pic3, &.pic4, &.pic5{
+            
+            &.pic1, &.pic2, &.pic3, &.pic4, &.pic5, &.pic6{
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center;
@@ -536,20 +538,20 @@ header{
         }
 
         p{
-            font-size: fontCalc(14, 21);
-            line-height: 1.8em;
+            font-size: fontCalc(14, 19);
+            line-height: 2em;
             color: $primary;
         }
 
-        .wrap-info {
+        /* .wrap-info {
             text-align: center;
-        }
+        } */
 
         p.info{
             &:first-of-type{
                 margin-right: 30px;
             }
-            font-size: fontCalc(14, 18);
+            font-size: fontCalc(13, 17);
             display: inline-block;
             &:first-of-type{
                 margin-top: 15px;
@@ -623,7 +625,7 @@ header{
     form{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-gap: 30px;
+        grid-gap: 40px;
     }
 
     form .form-wrapper, form .txt-area { position: relative; margin-bottom: 15px;}
@@ -649,7 +651,7 @@ header{
         height: 100%;
         pointer-events: none;
         border-bottom: 1px solid #000;
-        font-size: fontCalc(14, 18)
+        font-size: fontCalc(13, 16)
     }
 
     .form-wrapper label::after, .txt-label::after{

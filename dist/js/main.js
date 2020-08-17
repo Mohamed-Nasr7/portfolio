@@ -131,3 +131,9 @@ window.addEventListener('scroll', function(){
     }
     job.style.opacity = 1 - (window.scrollY / 300);
 });
+
+
+
+document.addEventListener( 'DOMContentLoaded', function () {
+	new Splide( '#image-slider' ).mount();
+} );
