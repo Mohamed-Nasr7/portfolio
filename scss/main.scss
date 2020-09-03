@@ -229,7 +229,7 @@ header{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: minmax(250px, 1fr);
-        grid-gap: 70px;
+        grid-gap: 60px;
         justify-content: center;
 
         @include mediaFromTo(991px, 2500px){
@@ -237,9 +237,9 @@ header{
             grid-gap: 50px;
         }
 
-        @include mediaMd{
+        /* @include mediaMd{
             grid-template-columns: minmax(250px, 400px);
-        }
+        } */
 
         @include mediaSm{
             display: flex;
