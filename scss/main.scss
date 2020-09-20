@@ -120,16 +120,22 @@ header {
     h1,
     h6 {
       position: absolute;
+      opacity: 0;
+
       left: 50%;
       width: 150px;
       @supports (width: max-content) {
         width: max-content;
       }
     }
+    .smooth-display {
+      opacity: 1;
+    }
 
     h1 {
       font-family: "colfaxM";
       font-weight: bold;
+      transition: opacity 0.9s ease;
       font-size: fontCalc(32, 42);
       top: 50%;
       margin-bottom: 10px;
@@ -139,6 +145,7 @@ header {
 
     h6 {
       font-size: fontCalc(13, 17);
+      transition: all 0.9s ease;
       top: 57%;
       transform: translate(-50%, -50%);
       margin-top: 7px;
@@ -147,8 +154,10 @@ header {
 
   .arrows {
     position: absolute;
+    opacity: 0;
     bottom: 15%;
     left: 50%;
+    transition: opacity 0.9s ease-in-out;
     transform: translate(-50%);
     cursor: pointer;
 

@@ -349,6 +349,7 @@ header {
 .header .contact .txt-area .txt-label .content h6,
 .contact .txt-area .txt-label .header .content h6 {
   position: absolute;
+  opacity: 0;
   left: 50%;
   width: 150px;
 }
@@ -362,9 +363,14 @@ header {
   }
 }
 
+.header .content .smooth-display, .header .contact .txt-area .txt-label .content .smooth-display, .contact .txt-area .txt-label .header .content .smooth-display {
+  opacity: 1;
+}
+
 .header .content h1, .header .contact .txt-area .txt-label .content h1, .contact .txt-area .txt-label .header .content h1 {
   font-family: "colfaxM";
   font-weight: bold;
+  transition: opacity 0.9s ease;
   font-size: calc( 32px + (42 - 32) * ((100vw - 320px) / (1700 - 320)));
   top: 50%;
   margin-bottom: 10px;
@@ -377,6 +383,7 @@ header {
 .header .contact .txt-area .txt-label .content h6,
 .contact .txt-area .txt-label .header .content h6 {
   font-size: calc( 13px + (17 - 13) * ((100vw - 320px) / (1700 - 320)));
+  transition: all 0.9s ease;
   top: 57%;
   transform: translate(-50%, -50%);
   margin-top: 7px;
@@ -384,8 +391,10 @@ header {
 
 .header .arrows {
   position: absolute;
+  opacity: 0;
   bottom: 15%;
   left: 50%;
+  transition: opacity 0.9s ease-in-out;
   transform: translate(-50%);
   cursor: pointer;
 }
