@@ -331,18 +331,19 @@
 }
 
 @font-face {
-  font-family: "colfax";
+  font-family: 'colfax';
   src: url(".././assets/fonts/Colfax-regular.otf");
 }
 
 @font-face {
-  font-family: "colfaxM";
+  font-family: 'colfaxM';
   src: url(".././assets/fonts/Colfax-Medium.otf");
 }
 
 body {
-  font-family: "colfax";
+  font-family: 'colfax';
   color: #092946;
+  overflow: hidden;
 }
 
 ::-moz-selection {
@@ -427,7 +428,7 @@ header {
 }
 
 .header:after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -437,7 +438,7 @@ header {
 }
 
 .header:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -489,7 +490,7 @@ header {
 }
 
 .header .content h1, .header .contact .txt-area .txt-label .content h1, .contact .txt-area .txt-label .header .content h1 {
-  font-family: "colfaxM";
+  font-family: 'colfaxM';
   font-weight: bold;
   -webkit-transition: opacity 0.9s ease;
   -o-transition: opacity 0.9s ease;
@@ -654,7 +655,7 @@ header {
 }
 
 .portfolio .wrapper > .project:after {
-  content: "";
+  content: '';
   background-color: #595c611e;
   position: absolute;
   height: 100%;
@@ -1063,7 +1064,7 @@ header {
   padding-top: 20px;
   padding-bottom: 10px;
   font-size: 1rem;
-  font-family: "colfax";
+  font-family: 'colfax';
   border: none;
   outline: none;
   background: transparent;
@@ -1083,7 +1084,7 @@ header {
 
 .contact .form-wrapper label::after,
 .contact .txt-label::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: -1px;

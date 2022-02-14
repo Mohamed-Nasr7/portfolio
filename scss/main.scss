@@ -1,4 +1,4 @@
-@import "config";
+@import 'config';
 
 * {
   box-sizing: border-box;
@@ -7,18 +7,19 @@
 }
 
 @font-face {
-  font-family: "colfax";
-  src: url(".././assets/fonts/Colfax-regular.otf");
+  font-family: 'colfax';
+  src: url('.././assets/fonts/Colfax-regular.otf');
 }
 
 @font-face {
-  font-family: "colfaxM";
-  src: url(".././assets/fonts/Colfax-Medium.otf");
+  font-family: 'colfaxM';
+  src: url('.././assets/fonts/Colfax-Medium.otf');
 }
 
 body {
-  font-family: "colfax";
+  font-family: 'colfax';
   color: $primary;
+  overflow: hidden;
 
   & > section {
     @extend .sectionPadding;
@@ -81,7 +82,7 @@ header {
 }
 
 .header {
-  background-image: url(".././assets/img/header.jpg");
+  background-image: url('.././assets/img/header.jpg');
   background-position-x: center;
   @extend .responsiveBg;
   height: 100vh;
@@ -91,7 +92,7 @@ header {
   background-color: #000;
 
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -100,7 +101,7 @@ header {
     background-color: rgba(19, 18, 18, 0.774);
   }
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -133,7 +134,7 @@ header {
     }
 
     h1 {
-      font-family: "colfaxM";
+      font-family: 'colfaxM';
       font-weight: bold;
       transition: opacity 0.9s ease;
       font-size: fontCalc(32, 42);
@@ -244,7 +245,7 @@ header {
       }
 
       &:after {
-        content: "";
+        content: '';
         background-color: #595c611e;
         position: absolute;
         height: 100%;
@@ -258,22 +259,22 @@ header {
       }
 
       &.pic1 {
-        background: url(".././assets/img/manage.png");
+        background: url('.././assets/img/manage.png');
       }
       &.pic2 {
-        background: url(".././assets/img/covid19.png");
+        background: url('.././assets/img/covid19.png');
       }
       &.pic3 {
-        background: url(".././assets/img/spectacle.png");
+        background: url('.././assets/img/spectacle.png');
       }
       &.pic4 {
-        background: url(".././assets/img/bookswap.jpg");
+        background: url('.././assets/img/bookswap.jpg');
       }
       &.pic5 {
-        background: url(".././assets/img/0.jpg");
+        background: url('.././assets/img/0.jpg');
       }
       &.pic6 {
-        background: url(".././assets/img/the-conv.jpg");
+        background: url('.././assets/img/the-conv.jpg');
       }
 
       &.pic1,
@@ -486,7 +487,7 @@ header {
     background-size: contain;
     height: 100%;
     width: 100%;
-    background: url(".././assets/img/me-sm.jpg");
+    background: url('.././assets/img/me-sm.jpg');
     border-radius: 50%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -599,7 +600,7 @@ header {
     padding-top: 20px;
     padding-bottom: 10px;
     font-size: 1rem;
-    font-family: "colfax";
+    font-family: 'colfax';
     border: none;
     outline: none;
     background: transparent;
@@ -619,7 +620,7 @@ header {
 
   .form-wrapper label::after,
   .txt-label::after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     bottom: -1px;
