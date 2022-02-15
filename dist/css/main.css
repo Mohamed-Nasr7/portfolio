@@ -417,14 +417,11 @@ header {
 }
 
 .header {
-  background-image: url(".././assets/img/header.jpg");
-  background-position-x: center;
   height: 100vh;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #000;
 }
 
 .header:after {

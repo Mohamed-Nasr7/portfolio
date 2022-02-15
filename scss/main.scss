@@ -82,14 +82,11 @@ header {
 }
 
 .header {
-  background-image: url('.././assets/img/header.jpg');
-  background-position-x: center;
   @extend .responsiveBg;
   height: 100vh;
   position: relative;
   display: flex;
   @extend .center;
-  background-color: #000;
 
   &:after {
     content: '';
