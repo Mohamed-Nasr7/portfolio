@@ -424,17 +424,6 @@ header {
   display: flex;
 }
 
-.header:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  -webkit-filter: blur(4px);
-          filter: blur(4px);
-}
-
 .header .content, .header .contact .txt-area .txt-label .content, .contact .txt-area .txt-label .header .content {
   color: #092946;
   z-index: 5;

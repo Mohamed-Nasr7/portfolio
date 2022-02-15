@@ -88,16 +88,6 @@ header {
   display: flex;
   @extend .center;
 
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    filter: blur(4px);
-  }
-
   .content {
     color: $primary;
     z-index: 5;
