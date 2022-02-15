@@ -436,7 +436,7 @@ header {
 }
 
 .header .content, .header .contact .txt-area .txt-label .content, .contact .txt-area .txt-label .header .content {
-  color: white;
+  color: #092946;
   z-index: 5;
   display: -webkit-box;
   display: -ms-flexbox;
