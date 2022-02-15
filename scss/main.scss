@@ -88,15 +88,6 @@ header {
   display: flex;
   @extend .center;
 
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(19, 18, 18, 0.774);
-  }
   &:before {
     content: '';
     position: absolute;
