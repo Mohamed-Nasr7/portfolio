@@ -586,6 +586,13 @@ header {
   max-height: 150px;
 }
 
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+}
+
 /* Portfolio */
 .portfolio .wrapper {
   display: -ms-grid;
