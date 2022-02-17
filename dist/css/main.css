@@ -417,7 +417,7 @@ header {
 }
 
 .header {
-  height: 100vh;
+  height: 60vh;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
