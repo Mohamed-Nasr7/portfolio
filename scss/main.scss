@@ -79,9 +79,6 @@ body {
 /* Header */
 header {
   overflow: hidden;
-}
-
-.header {
   @extend .responsiveBg;
   height: 60vh;
   position: relative;

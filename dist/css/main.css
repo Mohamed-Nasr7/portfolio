@@ -42,7 +42,7 @@
   padding: 80px 0;
 }
 
-.responsiveBg, .header {
+.responsiveBg, header {
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -163,7 +163,7 @@
 }
 
 /* Flexbox Centering */
-.center, .loaderBg, .header, .portfolio .wrapper > .project .overlay, .arrow {
+.center, .loaderBg, header, .portfolio .wrapper > .project .overlay, .arrow {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -414,9 +414,6 @@ body {
 /* Header */
 header {
   overflow: hidden;
-}
-
-.header {
   height: 60vh;
   position: relative;
   display: -webkit-box;
@@ -424,7 +421,7 @@ header {
   display: flex;
 }
 
-.header .content, .header .contact .txt-area .txt-label .content, .contact .txt-area .txt-label .header .content {
+header .content, header .contact .txt-area .txt-label .content, .contact .txt-area .txt-label header .content {
   color: white;
   z-index: 5;
   display: -webkit-box;
@@ -440,10 +437,10 @@ header {
   text-align: center;
 }
 
-.header .content h1, .header .contact .txt-area .txt-label .content h1, .contact .txt-area .txt-label .header .content h1,
-.header .content h6,
-.header .contact .txt-area .txt-label .content h6,
-.contact .txt-area .txt-label .header .content h6 {
+header .content h1, header .contact .txt-area .txt-label .content h1, .contact .txt-area .txt-label header .content h1,
+header .content h6,
+header .contact .txt-area .txt-label .content h6,
+.contact .txt-area .txt-label header .content h6 {
   position: absolute;
   opacity: 0;
   left: 50%;
@@ -451,21 +448,21 @@ header {
 }
 
 @supports ((width: -webkit-max-content) or (width: -moz-max-content) or (width: max-content)) {
-  .header .content h1, .header .contact .txt-area .txt-label .content h1, .contact .txt-area .txt-label .header .content h1,
-  .header .content h6,
-  .header .contact .txt-area .txt-label .content h6,
-  .contact .txt-area .txt-label .header .content h6 {
+  header .content h1, header .contact .txt-area .txt-label .content h1, .contact .txt-area .txt-label header .content h1,
+  header .content h6,
+  header .contact .txt-area .txt-label .content h6,
+  .contact .txt-area .txt-label header .content h6 {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
   }
 }
 
-.header .content .smooth-display, .header .contact .txt-area .txt-label .content .smooth-display, .contact .txt-area .txt-label .header .content .smooth-display {
+header .content .smooth-display, header .contact .txt-area .txt-label .content .smooth-display, .contact .txt-area .txt-label header .content .smooth-display {
   opacity: 1;
 }
 
-.header .content h1, .header .contact .txt-area .txt-label .content h1, .contact .txt-area .txt-label .header .content h1 {
+header .content h1, header .contact .txt-area .txt-label .content h1, .contact .txt-area .txt-label header .content h1 {
   font-family: 'colfaxM';
   font-weight: bold;
   -webkit-transition: opacity 0.9s ease;
@@ -481,9 +478,9 @@ header {
 }
 
 
-.header .content h6,
-.header .contact .txt-area .txt-label .content h6,
-.contact .txt-area .txt-label .header .content h6 {
+header .content h6,
+header .contact .txt-area .txt-label .content h6,
+.contact .txt-area .txt-label header .content h6 {
   font-size: calc( 13px + (17 - 13) * ((100vw - 320px) / (1700 - 320)));
   -webkit-transition: all 0.9s ease;
   -o-transition: all 0.9s ease;
@@ -495,7 +492,7 @@ header {
   margin-top: 7px;
 }
 
-.header .arrows {
+header .arrows {
   position: absolute;
   opacity: 0;
   bottom: 15%;
@@ -509,7 +506,7 @@ header {
   cursor: pointer;
 }
 
-.header .arrows span {
+header .arrows span {
   display: block;
   width: 25px;
   height: 25px;
@@ -523,18 +520,18 @@ header {
           animation: animate 2s infinite;
 }
 
-.header .arrows span:nth-child(2) {
+header .arrows span:nth-child(2) {
   -webkit-animation-delay: -0.2s;
           animation-delay: -0.2s;
 }
 
-.header .arrows span:nth-child(3) {
+header .arrows span:nth-child(3) {
   -webkit-animation-delay: -0.4s;
           animation-delay: -0.4s;
 }
 
 @media screen and (max-width: 568px) {
-  .header .arrows span {
+  header .arrows span {
     width: 20px;
     height: 20px;
   }
