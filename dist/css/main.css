@@ -414,6 +414,10 @@ body {
 /* Header */
 header {
   overflow: hidden;
+  position: relative;
+  text-align: center;
+  background: #092946;
+  color: white;
 }
 
 .header {

@@ -79,6 +79,10 @@ body {
 /* Header */
 header {
   overflow: hidden;
+  position: relative;
+  text-align: center;
+  background: $primary;
+  color: white;
 }
 
 .header {
