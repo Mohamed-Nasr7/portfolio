@@ -665,7 +665,7 @@ header {
 }
 
 .portfolio .wrapper > .project.pic1 {
-  background: url(".././assets/img/manage.png");
+  background: url(".././assets/img/connect.jpg");
 }
 
 .portfolio .wrapper > .project.pic2 {
@@ -673,19 +673,19 @@ header {
 }
 
 .portfolio .wrapper > .project.pic3 {
-  background: url(".././assets/img/spectacle.png");
+  background: url(".././assets/img/manage.png");
 }
 
 .portfolio .wrapper > .project.pic4 {
-  background: url(".././assets/img/bookswap.jpg");
+  background: url(".././assets/img/spectacle.png");
 }
 
 .portfolio .wrapper > .project.pic5 {
-  background: url(".././assets/img/0.jpg");
+  background: url(".././assets/img/bookswap.jpg");
 }
 
 .portfolio .wrapper > .project.pic6 {
-  background: url(".././assets/img/the-conv.jpg");
+  background: url(".././assets/img/0.jpg");
 }
 
 .portfolio .wrapper > .project.pic1, .portfolio .wrapper > .project.pic2, .portfolio .wrapper > .project.pic3, .portfolio .wrapper > .project.pic4, .portfolio .wrapper > .project.pic5, .portfolio .wrapper > .project.pic6 {
