@@ -121,7 +121,6 @@ header {
       transition: opacity 0.9s ease;
       font-size: fontCalc(32, 42);
       top: 50%;
-      margin-bottom: 10px;
       transform: translate(-50%, -50%);
       /* text-shadow: 0 0 10px #fff, 0 0 20px #fff; */
     }
@@ -131,7 +130,7 @@ header {
       transition: all 0.9s ease;
       top: 57%;
       transform: translate(-50%, -50%);
-      margin-top: 7px;
+      margin-top: 15px;
     }
   }
 

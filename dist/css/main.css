@@ -477,7 +477,6 @@ header {
   transition: opacity 0.9s ease;
   font-size: calc( 32px + (42 - 32) * ((100vw - 320px) / (1700 - 320)));
   top: 50%;
-  margin-bottom: 10px;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -496,7 +495,7 @@ header {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  margin-top: 7px;
+  margin-top: 15px;
 }
 
 .header-content .arrows {
