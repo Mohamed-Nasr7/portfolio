@@ -693,8 +693,9 @@ header {
   height: 220px;
   -webkit-box-shadow: 0 -6px 12px rgba(0, 5, 71, 0.028), 0 -7.9px 17.5px rgba(1, 0, 48, 0.049), 0 -3.2px 24px rgba(0, 0, 0, 0.066), 0 14.9px 35.4px rgba(8, 7, 56, 0.082), 0 45px 80px rgba(40, 18, 168, 0.09);
           box-shadow: 0 -6px 12px rgba(0, 5, 71, 0.028), 0 -7.9px 17.5px rgba(1, 0, 48, 0.049), 0 -3.2px 24px rgba(0, 0, 0, 0.066), 0 14.9px 35.4px rgba(8, 7, 56, 0.082), 0 45px 80px rgba(40, 18, 168, 0.09);
-  /* Set line height for the first link */
-  /* No margins for the first link */
+  /* First portfolio item customizations */
+  /* Set line height for the paragraph*/
+  /* No margins for the link */
 }
 
 @media screen and (max-width: 568px) {
@@ -825,6 +826,10 @@ header {
 
 .portfolio .wrapper > .project .overlay a:first-of-type {
   margin: 20px 12px 0 0;
+}
+
+.portfolio .wrapper > .project.pic1 {
+  background-position: 0;
 }
 
 .portfolio .wrapper > .project.pic1 .overlay p {
