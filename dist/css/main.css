@@ -1057,6 +1057,10 @@ header {
 }
 
 /* Skills */
+.skills {
+  padding-top: 0;
+}
+
 .skills .custom-shape-divider-top-1645649853 {
   width: 100%;
   overflow: hidden;
