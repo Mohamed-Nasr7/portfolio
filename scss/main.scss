@@ -575,21 +575,22 @@ header {
 .skills {
   padding-top: 0;
 
-  .custom-shape-divider-top-1645649853 {
+  .custom-shape-divider-top-1645651547 {
     width: 100%;
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
   }
 
-  .custom-shape-divider-top-1645649853 svg {
+  .custom-shape-divider-top-1645651547 svg {
     position: relative;
     display: block;
-    width: calc(100% + 1.3px);
-    height: 121px;
+    width: calc(103% + 1.3px);
+    height: 93px;
+    transform: rotateY(180deg);
   }
 
-  .custom-shape-divider-top-1645649853 .shape-fill {
+  .custom-shape-divider-top-1645651547 .shape-fill {
     fill: $light-gray;
   }
 

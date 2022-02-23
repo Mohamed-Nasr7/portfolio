@@ -1061,7 +1061,7 @@ header {
   padding-top: 0;
 }
 
-.skills .custom-shape-divider-top-1645649853 {
+.skills .custom-shape-divider-top-1645651547 {
   width: 100%;
   overflow: hidden;
   line-height: 0;
@@ -1070,14 +1070,16 @@ header {
           transform: rotate(180deg);
 }
 
-.skills .custom-shape-divider-top-1645649853 svg {
+.skills .custom-shape-divider-top-1645651547 svg {
   position: relative;
   display: block;
-  width: calc(100% + 1.3px);
-  height: 121px;
+  width: calc(103% + 1.3px);
+  height: 93px;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
-.skills .custom-shape-divider-top-1645649853 .shape-fill {
+.skills .custom-shape-divider-top-1645651547 .shape-fill {
   fill: #f3f5fc;
 }
 
