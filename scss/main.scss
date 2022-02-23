@@ -372,6 +372,13 @@ header {
           margin: 20px 12px 0 0;
         }
       }
+
+      /* Set line height for the first link */
+      &.pic1 .overlay {
+        p {
+          line-height: 1rem;
+        }
+      }
       /* No margins for the first link */
       &.pic1 .overlay {
         a {
