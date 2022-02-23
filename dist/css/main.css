@@ -832,7 +832,7 @@ header {
 }
 
 .portfolio .wrapper > .project.pic1 .overlay a {
-  margin: 0;
+  margin: 10px 5px 0;
 }
 
 /* Up Arrow */
