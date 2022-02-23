@@ -897,6 +897,7 @@ header {
 /* About */
 .about {
   background-color: #f3f5fc;
+  padding-top: 0;
 }
 
 .about .img-wrapper {
