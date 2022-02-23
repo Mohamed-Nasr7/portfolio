@@ -57,12 +57,12 @@ buttons.forEach(function (button) {
 
 // Fading Page Elements
 var disappeared = document.querySelectorAll('.disappeared');
-fadeinPos = window.innerHeight;
+fadeinPosition = window.innerHeight;
 
 disappeared.forEach(function (element) {
   window.addEventListener('scroll', function () {
-    var elementPos = element.getBoundingClientRect().top;
-    if (elementPos < fadeinPos) {
+    var elementPosition = element.getBoundingClientRect().top;
+    if (elementPosition < fadeinPosition) {
       element.classList.add('fadein');
     }
   });
@@ -74,8 +74,8 @@ bars.forEach(function (element) {
   var barClass = element.dataset.progress;
 
   window.addEventListener('scroll', function () {
-    var elementPos = element.getBoundingClientRect().top;
-    if (elementPos < fadeinPos) {
+    var elementPosition = element.getBoundingClientRect().top;
+    if (elementPosition < fadeinPosition) {
       element.classList.add(barClass);
     }
   });
