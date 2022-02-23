@@ -898,6 +898,24 @@ header {
 .about {
   background-color: #f3f5fc;
   padding-top: 0;
+  /* SVG Shape divider */
+}
+
+.about .custom-shape-divider-top-1645648137 {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.about .custom-shape-divider-top-1645648137 svg {
+  position: relative;
+  display: block;
+  width: calc(121% + 1.3px);
+  height: 155px;
+}
+
+.about .custom-shape-divider-top-1645648137 .shape-fill {
+  fill: #ffffff;
 }
 
 .about .img-wrapper {
@@ -1036,23 +1054,6 @@ header {
     height: 300px;
     opacity: 0;
   }
-}
-
-.custom-shape-divider-top-1645648137 {
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.custom-shape-divider-top-1645648137 svg {
-  position: relative;
-  display: block;
-  width: calc(121% + 1.3px);
-  height: 155px;
-}
-
-.custom-shape-divider-top-1645648137 .shape-fill {
-  fill: #ffffff;
 }
 
 /* Skills */
