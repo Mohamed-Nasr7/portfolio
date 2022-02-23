@@ -57,7 +57,7 @@ buttons.forEach(function (button) {
 
 // Fading Page Elements
 var disappeared = document.querySelectorAll('.disappeared');
-fadeinPos = window.innerHeight / 1.2;
+fadeinPos = window.innerHeight;
 
 disappeared.forEach(function (element) {
   window.addEventListener('scroll', function () {
