@@ -372,6 +372,12 @@ header {
           margin: 20px 12px 0 0;
         }
       }
+      /* No margins for the first link */
+      &.pic1 .overlay {
+        a {
+          margin: 0;
+        }
+      }
     }
   }
 }
