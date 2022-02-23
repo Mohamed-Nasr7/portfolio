@@ -1057,6 +1057,26 @@ header {
 }
 
 /* Skills */
+.skills .custom-shape-divider-top-1645649853 {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.skills .custom-shape-divider-top-1645649853 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 121px;
+}
+
+.skills .custom-shape-divider-top-1645649853 .shape-fill {
+  fill: #f3f5fc;
+}
+
 .skills .wrapper {
   display: -ms-grid;
   display: grid;
