@@ -636,6 +636,23 @@ header {
 .contact {
   background-color: $light-gray;
 
+  .custom-shape-divider-top-1645714615 {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .custom-shape-divider-top-1645714615 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 206px;
+  }
+
+  .custom-shape-divider-top-1645714615 .shape-fill {
+    fill: #fff;
+  }
+
   .header-container {
     @extend .container;
   }

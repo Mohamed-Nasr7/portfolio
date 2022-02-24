@@ -1128,6 +1128,23 @@ header {
   background-color: #f3f5fc;
 }
 
+.contact .custom-shape-divider-top-1645714615 {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.contact .custom-shape-divider-top-1645714615 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 206px;
+}
+
+.contact .custom-shape-divider-top-1645714615 .shape-fill {
+  fill: #fff;
+}
+
 .contact .wrapper {
   padding: 0 16px;
 }
