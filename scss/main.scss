@@ -811,6 +811,23 @@ header {
 
 footer {
   background-color: $primary;
+  .custom-shape-divider-top-1645734548 {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .custom-shape-divider-top-1645734548 svg {
+    position: relative;
+    display: block;
+    width: calc(287% + 1.3px);
+    height: 136px;
+  }
+
+  .custom-shape-divider-top-1645734548 .shape-fill {
+    fill: $light-gray;
+  }
 
   .wrapper {
     @extend .container;

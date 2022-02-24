@@ -14,7 +14,7 @@
 .sectionName, body section h2 {
   margin-bottom: 60px;
   font-size: calc( 20px + (25 - 20) * ((100vw - 320px) / (1700 - 320)));
-  font-family: 'colfaxM';
+  font-family: "colfaxM";
   position: relative;
   width: 150px;
 }
@@ -28,7 +28,7 @@
 }
 
 .sectionName::after, body section h2::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 50%;
   height: 2.5px;
@@ -57,7 +57,7 @@
   overflow: hidden;
   font-size: calc( 12px + (14 - 12) * ((100vw - 320px) / (1700 - 320)));
   border-radius: 2px;
-  font-family: 'colfax';
+  font-family: "colfax";
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -1312,6 +1312,26 @@ header {
 /* footer */
 footer {
   background-color: #092946;
+}
+
+footer .custom-shape-divider-top-1645734548 {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+footer .custom-shape-divider-top-1645734548 svg {
+  position: relative;
+  display: block;
+  width: calc(287% + 1.3px);
+  height: 136px;
+}
+
+footer .custom-shape-divider-top-1645734548 .shape-fill {
+  fill: #f3f5fc;
 }
 
 footer .wrapper {
