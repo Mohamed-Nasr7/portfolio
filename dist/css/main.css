@@ -14,7 +14,7 @@
 .sectionName, body section h2 {
   margin-bottom: 60px;
   font-size: calc( 20px + (25 - 20) * ((100vw - 320px) / (1700 - 320)));
-  font-family: "colfaxM";
+  font-family: 'colfaxM';
   position: relative;
   width: 150px;
 }
@@ -28,7 +28,7 @@
 }
 
 .sectionName::after, body section h2::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 50%;
   height: 2.5px;
@@ -57,7 +57,7 @@
   overflow: hidden;
   font-size: calc( 12px + (14 - 12) * ((100vw - 320px) / (1700 - 320)));
   border-radius: 2px;
-  font-family: "colfax";
+  font-family: 'colfax';
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -1126,6 +1126,7 @@ header {
 /* Contact */
 .contact {
   background-color: #f3f5fc;
+  padding-top: 0;
 }
 
 .contact .custom-shape-divider-top-1645714615 {
