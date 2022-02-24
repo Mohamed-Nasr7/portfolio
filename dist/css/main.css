@@ -1061,25 +1061,22 @@ header {
   padding-top: 0;
 }
 
-.skills .custom-shape-divider-top-1645651547 {
+.skills .custom-shape-divider-top-1645709247 {
   width: 100%;
   overflow: hidden;
   line-height: 0;
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
 }
 
-.skills .custom-shape-divider-top-1645651547 svg {
+.skills .custom-shape-divider-top-1645709247 svg {
   position: relative;
   display: block;
-  width: calc(103% + 1.3px);
-  height: 93px;
+  width: calc(100% + 1.3px);
+  height: 98px;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
 
-.skills .custom-shape-divider-top-1645651547 .shape-fill {
+.skills .custom-shape-divider-top-1645709247 .shape-fill {
   fill: #f3f5fc;
 }
 
