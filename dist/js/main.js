@@ -99,7 +99,6 @@ window.addEventListener('scroll', function () {
   var job = document.querySelector('header h6');
   var pos = window.pageYOffset / 3 + 'px';
 
-  header.style.backgroundPosition = 'center ' + pos;
   name.style.transform =
     'translate(-50%, ' + (window.scrollY * -0.2 - 50) + '%)';
   job.style.transform = 'translate(-50%, ' + (window.scrollY * 1.2 - 50) + '%)';
