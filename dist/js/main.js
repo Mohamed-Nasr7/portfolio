@@ -92,7 +92,7 @@ arrow.addEventListener('click', function () {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-var header = document.querySelector('.header');
+var header = document.querySelector('header');
 
 window.addEventListener('scroll', function () {
   var name = document.querySelector('header h1');
