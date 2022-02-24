@@ -1314,7 +1314,7 @@ footer {
   background-color: #092946;
 }
 
-footer .custom-shape-divider-top-1645734548 {
+footer .custom-shape-divider-top-1645735975 {
   width: 100%;
   overflow: hidden;
   line-height: 0;
@@ -1323,14 +1323,14 @@ footer .custom-shape-divider-top-1645734548 {
           transform: rotate(180deg);
 }
 
-footer .custom-shape-divider-top-1645734548 svg {
+footer .custom-shape-divider-top-1645735975 svg {
   position: relative;
   display: block;
   width: calc(287% + 1.3px);
-  height: 136px;
+  height: 112px;
 }
 
-footer .custom-shape-divider-top-1645734548 .shape-fill {
+footer .custom-shape-divider-top-1645735975 .shape-fill {
   fill: #f3f5fc;
 }
 
